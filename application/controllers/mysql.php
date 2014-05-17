@@ -14,9 +14,5 @@ class Mysql extends CI_Controller {
 		$estados = $this->estados->get_all();
 		foreach($estados->result() as $q)
 			echo $q->nom_largo."<br/>";
-		//$this->load->view('welcome_message');
 	}
 }
-
-/* End of file welcome.php */
-/* Location: ./application/controllers/welcome.php */
