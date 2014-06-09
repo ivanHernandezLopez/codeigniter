@@ -7,7 +7,7 @@
 		</style>
 	</head>
 	<body>	
-		<a href="<?php echo base_url(); ?>usuarios/agregar" class="link">
+		<a href="<?php echo base_url(); ?>users/add" class="link">
 			<input type="button" value="Agregar" class="add">
 		</a><br/><br/>
 		<div class="datagrid">

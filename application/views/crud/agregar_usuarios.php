@@ -85,7 +85,7 @@
 		</style>
 	</head>
 	<body>		
-		<form class="formulario" action="<?php echo URL::base(); ?>usuarios/agregar" method="post">
+		<form class="formulario" action="<?php echo base_url(); ?>users/add" method="post">
 		    <ul>
 		       <li>
 		            <h2><?php echo ($msg=="")?"Datos del nuevo Usuario":$msg; ?></h2>
@@ -103,8 +103,8 @@
 		           <input type="url" name="web" placeholder="http://helpersphp.com/"  required/>
 		       </li>
 		        <li>
-		          <label for="website"><a href="<?php echo URL::base(); ?>usuarios/">
-		          <img class="back" src="<?php echo URL::base(); ?>/assets/regresar.gif">
+		          <label for="website"><a href="<?php echo base_url(); ?>users/">
+		          <img class="back" src="<?php echo base_url(); ?>/assets/regresar.gif">
 		          </a></label>
 		          <button class="submit" type="submit">Enviar</button>
 		        </li>
