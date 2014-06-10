@@ -30,4 +30,20 @@ class Users extends CI_Controller {
 		$this->load->view("crud/agregar_usuarios",$parametros);
 	}
 
+	public function edit()
+	{
+		$id = $this->uri->segment(3);
+		$parametros["msg"] = "";		
+		if($_POST)
+		{
+			$parametros["msg"] = "Error MySQL: Intente nuevamente";
+			$sql = $this->usuarios->actualizar($_POST,$id);
+			if($sql){
+				$parametros["msg"] = "Registro actualizado correctamente";
+			}
+		}
+		$parametros["usuario"] = $this->usuarios->seleccionar($id);
+		$this->load->view("crud/editar_usuarios",$parametros);
+	}
+
 }

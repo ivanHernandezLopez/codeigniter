@@ -62,12 +62,12 @@
 						<td><?php echo $usuario->name; ?></td>
 						<td><?php echo $usuario->email; ?></td>
 						<td style="text-align:center;">
-							<a href="<?php echo base_url(); ?>usuarios/editar/<?php echo $usuario->id_user; ?>" >
+							<a href="<?php echo base_url(); ?>users/edit/<?php echo $usuario->id_user; ?>" >
 								<img src="<?php echo base_url(); ?>assets/editar.jpg" style="width:20px;">
 							</a>
 						</td>
 						<td style="text-align:center;">
-							<a href="<?php echo base_url(); ?>usuarios/eliminar/<?php echo $usuario->id_user; ?>">
+							<a href="<?php echo base_url(); ?>users/delete/<?php echo $usuario->id_user; ?>">
 								<img src="<?php echo base_url(); ?>assets/eliminar.jpg" style="width:20px;">
 							</a>
 						</td>

@@ -85,26 +85,26 @@
 		</style>
 	</head>
 	<body>		
-		<form class="formulario" action="<?php echo URL::base(); ?>usuarios/editar/<?php echo $usuario->id_user; ?>" method="post">
+		<form class="formulario" action="<?php echo base_url(); ?>users/edit/<?php echo $usuario[0]->id_user; ?>" method="post">
 		    <ul>
 		       <li>
 		            <h2><?php echo ($msg=="")?"Datos del Usuario":$msg; ?></h2>
 		       </li>
 		       <li>
 		           <label for="name">Nombre completo:</label>
-		           <input type="text"  name="name" placeholder="HelpersPHP"  value="<?php echo $usuario->name; ?>" required/>
+		           <input type="text"  name="name" placeholder="HelpersPHP"  value="<?php echo $usuario[0]->name; ?>" required/>
 		       </li>
 		       <li>
 		           <label for="email">Correo electronico:</label>
-		           <input type="email" name="email" placeholder="contacto@helpersphp.com"  value="<?php echo $usuario->email; ?>" required/>
+		           <input type="email" name="email" placeholder="contacto@helpersphp.com"  value="<?php echo $usuario[0]->email; ?>" required/>
 		       </li>
 		       <li>
 		           <label for="website">Sitio Web:</label>
-		           <input type="url" name="web" placeholder="http://helpersphp.com/"  value="<?php echo $usuario->web; ?>" required/>
+		           <input type="url" name="web" placeholder="http://helpersphp.com/"  value="<?php echo $usuario[0]->web; ?>" required/>
 		       </li>
 		        <li>
-		          <label for="website"><a href="<?php echo URL::base(); ?>usuarios/">
-		          <img class="back" src="<?php echo URL::base(); ?>/assets/regresar.gif">
+		          <label for="website"><a href="<?php echo base_url(); ?>users/">
+		          <img class="back" src="<?php echo base_url(); ?>/assets/regresar.gif">
 		          </a></label>
 		          <button class="submit" type="submit">Enviar</button>
 		        </li>
