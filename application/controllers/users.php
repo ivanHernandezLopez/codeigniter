@@ -46,4 +46,11 @@ class Users extends CI_Controller {
 		$this->load->view("crud/editar_usuarios",$parametros);
 	}
 
+	public function delete()
+	{
+		$id = $this->uri->segment(3);
+		$this->usuarios->eliminar($id);
+		redirect('/users/index/','location'); 
+	}
+
 }

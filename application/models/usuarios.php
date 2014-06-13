@@ -22,6 +22,12 @@ class Usuarios extends CI_Model {
 		return $this->db->get_where("usuarios",array("id_user"=>$id))->result_object();
 	}
 
+	public function eliminar($id)
+	{
+		$this->db->where('id_user',$id);
+        return $this->db->delete('usuarios');
+	}
+
 	public function actualizar($post,$id)
 	{
 		$data = array(
