@@ -38,4 +38,13 @@ class Usuarios extends CI_Model {
 		$this->db->where('id_user', $id);
         return $this->db->update('usuarios', $data);
 	}
+
+	public function Login($username,$password){
+      
+        $this->db->where('username', $username);
+        return $this->db->where('password', $password);
+        
+    }
+
 }
+
