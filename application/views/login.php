@@ -259,7 +259,6 @@
     </style>
     <body>
         	<form id="login" action="<?php echo base_url(); ?>login/index" method="POST">
-                
                 <h1>
                 	BIENVENIDO    
                 </h1>

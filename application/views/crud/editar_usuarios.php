@@ -102,6 +102,10 @@
 		           <label for="website">Sitio Web:</label>
 		           <input type="url" name="web" placeholder="http://helpersphp.com/"  value="<?php echo $usuario[0]->web; ?>" required/>
 		       </li>
+		       <li>
+		           <label for="website">Contraseña:</label>
+		           <input type="password" name="pass" />
+		       </li>
 		        <li>
 		          <label for="website"><a href="<?php echo base_url(); ?>users/">
 		          <img class="back" src="<?php echo base_url(); ?>/assets/regresar.gif">
