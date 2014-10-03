@@ -265,7 +265,10 @@
                 <fieldset id="inputs">
                     <input id="username" type="text" placeholder="Correo" autofocus  name="username" >   
                     <input id="password" type="password" placeholder="Contraseña"  name="password">
-                    <label class="msg"><?php echo $msg; ?></label>
+                    <label class="msg">
+                    	<?php echo validation_errors(); ?>
+   						<?php echo form_open('verifylogin'); ?>
+   					</label>
                 </fieldset>
                 <fieldset id="actions">
                     <input type="submit" id="submit" value="Ingresar">

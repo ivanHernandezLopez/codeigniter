@@ -13,7 +13,7 @@ class Usuarios extends CI_Model {
 				"name"	=> $post["name"],
 				"email"	=> $post["email"],
 				"web"	=> $post["web"],
-				"password"	=> $post["pass"],
+				"password"	=> MD5($post["pass"]),
 			);
 		return $this->db->insert("usuarios",$data);
 	}
@@ -44,13 +44,11 @@ class Usuarios extends CI_Model {
         return $this->db->update('usuarios', $data);
 	}
 
-	public function Login($username,$password){
-      
+	public function Login($username,$password){     
        	$query = $this->db->where("email",$username);
-		$query = $this->db->where("password",$password);
+		$query = $this->db->where("password",MD5($password));
 		$query = $this->db->get("usuarios");
-		return $query->result_object();
-        
+		return $query->result_object();     
     }
 
 }
